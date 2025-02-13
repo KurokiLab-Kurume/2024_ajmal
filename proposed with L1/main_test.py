@@ -120,7 +120,7 @@ for i in range(K):
         mse = np.mean((Shr[i] - Shr_estimate[i]) ** 2)
         # if mse == 0:
         #         psnr = float('inf')  # PSNR is infinite if images are identical
-        max_pixel = 255.0
+        max_pixel = 1.0
         psnr = 10 * np.log10((max_pixel ** 2) / (mse+1e-6))
         psnr_values.append({"Image_ID": i+1, "PSNR": psnr})
         
