@@ -106,7 +106,7 @@ for image in all_coeffs:
 Shr_estimate = np.array(S) # (K, V, V) numpy array
 Shr_estimate = np.where(np.isnan(Shr_estimate), np.nanmean(Shr_estimate), Shr_estimate)  # Replace NaNs with 0
 
-"""calculate PSNR value"""
+"""save images"""
 Shr = load(K, V, image="/home/Set5/HR")
 
 print("Shr:",Shr)
@@ -114,6 +114,10 @@ print("Shr_estimate:",Shr_estimate)
 print(np.isnan(Shr).any())
 print(np.isnan(Shr_estimate).any())
 
+np.save("../l1_wavelet/X4_Shr_estimate", Shr_estimate)
+np.save("../l1_wavelet/Shr", Shr)
+
+"""calculate PSNR value"""
 psnr_values = []
 
 for i in range(K):
