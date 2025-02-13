@@ -26,15 +26,15 @@ S_lr, S_hr, cA = swt(K, V, image = "/home/DIV2K/DIV2K_train_LR_unknown/X2")
 # print(S_lr[1].shape) # (K, V, V)
 
 
-lam_coef = 0.02 #regularization parameter (lambda)
-lam_map = 0.02
-rho_coef = 0.1 #regularization parameter for coefficient optimization (rho)
-rho_dict = 0.1 #regularization parameter for dictionary optimization (rho)
-rho_map = 0.1
+lam_coef = 0.005 #regularization parameter (lambda)
+lam_map = 0.005
+rho_coef = 0.05 #regularization parameter for coefficient optimization (rho)
+rho_dict = 0.05 #regularization parameter for dictionary optimization (rho)
+rho_map = 0.05
 iter_csc = 10
 iter_coef = 50
 iter_dict = 50
-iter_map = 50
+iter_map = 5
 
 """CSR on LR images"""
 count_lr = 0
